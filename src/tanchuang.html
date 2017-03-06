@@ -1,0 +1,346 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="王佳蕾">
+    <meta name="Keywords" content="登录弹窗练习">
+    <meta name="Description" content="">
+    <title>登录弹窗</title>
+    <style type="text/css">
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        body{
+            font:16px;
+            font-family:"微软雅黑";
+            background:#eee;
+        }
+        a{
+            text-decoration:none;
+            background:transparent;
+        }
+        #mask{
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0px;
+            left:0px;
+            background-color:rgba(0,0,0,0.3);
+            z-index:9995;
+            display:none;
+        }
+        #loginInterFace{
+            position:absolute;
+            width:460px;
+            height:460px;
+            background:#fff;
+            z-index:9999;
+        }
+        #loginInterFace #header{
+            position:relative;
+            background:url("images/titlebg.png") no-repeat;
+            cursor:move;
+            height:20px;/*这里必须规定高度*/
+            padding:10px;
+        }
+        #loginInterFace #header a{
+            float:right;
+            width:14px;
+            height:14px;
+            padding:2px;
+            background:url("images/close.png") no-repeat -71px -45px;
+            display:block;
+        }
+        #loginInterFace h3{
+            text-align:center;
+        }
+        #loginInterFace #login-form{
+            position:relative;
+            padding:20px 110px;
+            padding-bottom:0px;
+        }
+        #loginInterFace #login-form form{
+            width:100%;
+        }
+        #loginInterFace #login-form form .form-item{
+            margin:5px 0px;
+        }
+        #loginInterFace #login-form form span{
+            font-size:14px;
+            color:#676767;
+        }
+        #loginInterFace #login-form form .form-item{
+            position:relative;
+            width:100%;
+            color:#676767;
+        }
+        #loginInterFace #login-form form .form-item input{
+            width:100%;
+            height:36px;
+            border:1px solid #a2a2a2;
+        }
+        #loginInterFace #login-form form .form-item label{
+            position:absolute;
+            top:0px;
+            right:-105px;
+            font-size:10px;
+            line-height:36px;
+            margin-left:5px;
+            color:#ff3300;
+            display:inline-block;
+        }
+        #loginInterFace #login-form form .hold{
+            position:relative;
+            margin:10px 0px;
+            font-size:14px;
+            color:#676767;
+            line-Height:36px;
+        }
+        #loginInterFace #login-form form .hold span.checked{
+            background:url("images/checked.gif") no-repeat;
+        }
+        #loginInterFace #login-form form div.hold span{
+            width:14px;
+            height:14px;
+            border:1px solid #a2a2a2;
+            background:#e0e0e0;
+            display:inline-block;/*要调节inline-block元素使其居中需要知道其父级定位元素的line-Height*/
+            vertical-align:middle;
+        }
+        #loginInterFace #login-form form #log{
+            background:#CC181E;;
+            color:white;
+            font-size:24px;
+            font-style:bold;
+        }
+        #loginInterFace #login-form form #log:hover{
+            background:#DF0209;
+        }
+        #loginInterFace #forAndSet{
+            text-align:center;
+            margin:15px 0px;
+        }
+        #loginInterFace #forAndSet a{
+            font-size:14px;
+            color:#666;
+            margin:0px 16px;
+        }
+        #loginInterFace #forAndSet a:hover{
+            color:#cc181e;
+        }
+        #loginInterFace #moreLogin{
+            line-height:100px;
+            width:100%;
+            position:absolute;
+            bottom:0px;
+            background:#eeeeee;
+            font-size:14px;
+            color:#a2a2a2;
+        }
+        #loginInterFace #moreLogin a{
+            display:inline-block;
+            vertical-align:middle;
+            margin:0px 5px;
+            width:50px;
+            height:50px;
+            background:url("images/btns-social.png") no-repeat;
+        }
+        #loginInterFace #moreLogin a.sina{
+            background-position:0 0;
+        }
+        #loginInterFace #moreLogin a.tencent{
+            background-position:-50px 0;
+        }
+        #loginInterFace #moreLogin a.wechat{
+            background-position:-100px 0;
+        }
+        #loginInterFace #moreLogin a.sina:hover{
+            background-position:0 -50px;
+        }
+        #loginInterFace #moreLogin a.tencent:hover{
+            background-position:-50px -50px;
+        }
+        #loginInterFace #moreLogin a.wechat:hover{
+            background-position:-100px -50px;
+        }
+    </style>
+</head>
+<body style="height:1500px;">
+<a id="headerLogin" href="javascript:;">登录</a>
+<div id="mask">
+    <div id="loginInterFace">
+        <div id="header">
+            <a href="javascript:;" id="close"></a>
+        </div>
+        <h3>账号登录</h3>
+        <div id="login-form">
+            <form action="">
+                <span>邮箱/手机号</span>
+                <div class="form-item">
+                    <input type="text" id="username" name="username" value="请输入用户名"/>
+                    <label for="username"></label>
+                </div>
+                <span>密码</span>
+                <div class="form-item">
+                    <input type="password" id="psw" name="psw" value=""/>
+                    <label for="psw"></label>
+                </div>
+                <div class="form-item hold">
+                    <span></span>&nbsp;&nbsp;&nbsp;保持登录状态
+                </div>
+                <div class="form-item">
+                    <input type="submit" id="log" value="登 录"/>
+                </div>
+                <div class="form-item">
+                    <input type="submit" id="fire" value="取消"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    init();
+    showMask();
+    focusAndBlur();
+    function focusAndBlur(){
+        var oInput=$("login-form").getElementsByTagName("input");
+        for(var i=0;i<oInput.length;i++){
+            oInput[i].onfocus=function(){
+                /*if(this.parentNode.getElementsByTagName("label")[0]){
+                 this.content=this.parentNode.getElementsByTagName("label")[0].innerHTML;
+                 this.parentNode.getElementsByTagName("label")[0].innerHTML='';
+                 }*/
+                if((this.type=="text")||(this.type=="password")){
+                    if((this.value=="请输入用户名")||(this.value=="请输入密码")){
+                        this.content=this.value;
+                        this.value='';
+                    }
+                }
+            }
+            oInput[i].onblur=function(){
+                if(this.value==''){
+                    this.value=this.content;
+                }else {
+                    if(this.id=='username'){
+                        var reg=/^[1-9a-zA-z]\w+@(163|qq|186|126)(\.(com|cn)){1,3}$/;
+                        var reg1=/^1[345678]\d{9}$/;
+                        if(reg.test(this.value)||reg1.test(this.value)){
+                            this.parentNode.getElementsByTagName("label")[0].innerHTML="";
+                        }else{
+                            this.parentNode.getElementsByTagName("label")[0].innerHTML="*用户名格式不正确";
+                            this.focus();
+                        }
+                    }else if(this.id=='psw'){
+                        var reg2=/^[\w,\,\.\,\.\?\/\|\\\[\]\{\}\~\!\@\#\$\%\^\&\*\(\)\-\=\+\*\/]{6,18}$/;
+                        var reg3=/^\d{6,18}$/;
+                        if((reg2.test(this.value))&&(!reg3.test(this.value))){
+                            this.parentNode.getElementsByTagName("label")[0].innerHTML="";
+                        }else{
+                            this.parentNode.getElementsByTagName("label")[0].innerHTML="*密码格式不正确";
+                            this.focus();
+                        }
+                    }
+                }
+            }
+        }
+    }
+    function drag(obj){
+        $("header").onmousedown=function(e){
+            var e=e||window.event;
+            var disx=e.pageX-obj.offsetLeft;
+            var disy=e.pageY-obj.offsetTop;
+            document.onmousemove=function(e){
+                var e=e||window.event;
+                var L=e.pageX-disx;
+                var T=e.pageY-disy;
+                /*在这里obj若是loginInterFace，它的父元素mask是fixed类型的元素即位置始终不变那么这里不用考虑滚动的问题*/
+                //var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                //var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+                var width=document.documentElement.clientWidth||document.body.clientWidth;
+                var height=document.documentElement.clientHeight||document.body.clientHeight;
+                if(L<0){
+                    L=0;
+                }else if(L>width-obj.offsetWidth){
+                    L=width-obj.offsetWidth;
+                }
+                if(T<0){
+                    T=0;
+                }else if(T>height-obj.offsetHeight){
+                    T=height-obj.offsetHeight;
+                }
+                obj.style.left=L+'px';
+                obj.style.top=T+'px';
+            };
+            document.onmouseup=function(){
+                document.onmousemove=null;
+                document.onmouseup=null;
+            };
+            return false;
+        };
+    }
+    function showMask(){
+        $("headerLogin").onclick=function(e){
+            var e=e||window.event;
+            e.stopPropagation();
+            $("mask").style.display="block";
+            center();//这里必须在显示之后就使得loginInterFace元素居中，在初始时这个元素隐藏，居中不起作用，这里在显示就会使得元素不在中间
+            drag($("loginInterFace"));
+        };
+        $("loginInterFace").onclick=function(e){
+            var e=e||window.event;
+            e.stopPropagation();
+        }
+        document.onclick=function(){
+            $("mask").style.display="none";
+        };
+        $("close").onclick=function(e){
+            var e=e||window.event;
+            e.stopPropagation();
+            $("mask").style.display="none";
+        }
+    }
+    function init(){
+        window.onresize=center;
+        setChecked();
+    }
+    function center(){
+        //document.documentElement.clientWidthd对各个浏览器兼容
+        $("loginInterFace").style.left=(document.documentElement.clientWidth-$("loginInterFace").offsetWidth)/2+'px';
+        $("loginInterFace").style.top=(document.documentElement.clientHeight-$("loginInterFace").offsetHeight)/2+'px';
+    }
+    function setChecked(){
+        var ohold=getElementsByClass($("login-form"),'hold');
+        var oSpan=ohold[0].getElementsByTagName("span")[0];
+        var onOff=true;
+        ohold[0].onclick=function(){
+            if(onOff){
+                oSpan.className='checked';
+            }else{
+                oSpan.className='';
+            }
+            onOff=!onOff;
+        }
+    }
+    function $(id){
+        return document.getElementById(id);
+    }
+    function getElementsByClass(obj,attr){
+        if(obj.getElementsByClassName){
+            return obj.getElementsByClassName(attr);
+        }else{
+            var doms=obj.getElementsByTagName("*");
+            var result=[];
+            for(var i=0;i<doms.length;i++){
+                var attrs=doms[i].className.split(" ");
+                for(var j=0;j<attrs.length;j++){
+                    if(attrs[i]==attr){
+                        result.push(doms[i]);
+                    }
+                }
+            }
+            return result;
+        }
+    }
+</script>
+</body>
+</html>
