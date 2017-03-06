@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f1caf7-6c61-4d5c-b3d0-69e199b13c74" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/bq.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/down_icon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/icon_01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/new_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/search_btn.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/v.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/css3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/css3.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/reset.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/z.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/less/z.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tanchuang.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,16 +20,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
@@ -99,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="z.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="z.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/less/z.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="0">
               <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
               <folding />
             </state>
@@ -285,12 +258,12 @@
       <workItem from="1488506783822" duration="617000" />
       <workItem from="1488563455974" duration="3029000" />
       <workItem from="1488686555078" duration="1036000" />
-      <workItem from="1488823581202" duration="203000" />
+      <workItem from="1488823581202" duration="707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11545000" />
+    <option name="totallyTimeSpent" value="12049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="1440" height="797" extended-state="0" />
@@ -580,16 +553,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/common.less" />
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="15" column="68" lean-forward="false" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/reset.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -628,9 +591,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/z.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="0">
           <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="15" column="68" lean-forward="false" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
